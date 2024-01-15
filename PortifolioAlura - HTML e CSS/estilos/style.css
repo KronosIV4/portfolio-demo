@@ -1,0 +1,163 @@
+/*IMPORT DE FONTE*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
+/*Variáveis*/
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #02f2fa;
+
+    --font-Montserrat-sans-serif: 'Montserrat', sans-serif;
+    --font-KroneOne-sans-serif: 'Krona One', sans-serif;
+}
+
+
+/*RESET CSS: PARA RESETAR OS ESTILOS PRÉ CARREGADOS NOS NAVEGADORES WEB*/
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+/*ESTILOS DA PÁGINA*/ 
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link{
+    
+    font-family: var(--font-Montserrat-sans-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+.container { /*classe main || container "PAI"*/
+    padding: 10% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+    
+}
+.container__texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.container__texto__titulo{
+    font-family: var(--font-KroneOne-sans-serif);
+    font-size: 2.25rem;
+}
+.container__texto__titulo_destaque {
+    color: var(--cor-terciaria);
+}
+.container__texto__links__subTitulo {
+    font-family: var(--font-KroneOne-sans-serif);
+    font-weight: 400;
+    font-size: 1.5rem
+}
+.container__texto__paragrafo{
+    font-family: var(--font-Montserrat-sans-serif);
+    font-size: 1.5rem;
+}
+.container__texto__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.container__texto__links__botaoInstagram{
+    display: flex;
+    justify-content: center;
+    gap: 16px;  
+    border: 2px solid var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-Montserrat-sans-serif);
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    
+}
+.container__texto__links__botaoGitHub{
+    
+     display: flex;
+     justify-content: center;
+     gap: 16px;
+     border: 2px solid var(--cor-terciaria);
+     color: var(--cor-secundaria);
+     width: 50%;
+     text-decoration: none;
+     text-align: center;
+     font-family: var(--font-Montserrat-sans-serif);
+     font-weight: 600;
+     font-size: 1.5rem;
+     padding: 21.5px 0;
+     border-radius: 8px;
+    
+}
+
+
+.container__texto__links__botaoGitHub:hover{
+    box-shadow: 0 0 10px 0 #02f2fadb inset, 0 0 10px 4px #02f2fa;
+    background-color:#333333;
+    cursor: pointer;
+}
+.container__texto__links__botaoInstagram:hover{
+    
+    box-shadow: 0 0 10px 0 #02f2fadb inset, 0 0 10px 4px #02f2fa;     
+    background:  -webkit-linear-gradient(30deg, rgba(138,39,204,1) 17%, rgba(253,29,29,1) 49%, rgba(252,176,69,1) 74%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    cursor: pointer;
+   
+}
+
+.container__imagem{
+    width: 50%;
+}
+
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 23.64px;
+    text-align: center;
+    font-family: var(--font-Montserrat-sans-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media(max-width:1200px) {
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .container{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .container__texto{
+        width: auto;
+    }
+}
+
+/*1 REM por padrão nos navegadores equivale a 16 pixels*/
